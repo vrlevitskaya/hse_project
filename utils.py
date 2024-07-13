@@ -1,9 +1,6 @@
 import requests
 
 
-# url = "http://localhost:1337/v1/models"
-# json_response = requests.get(url).json()
-# print(json_response)
 def generate_group1(task, number_empties):
 
     url = "http://localhost:1337/v1/chat/completions"
@@ -11,7 +8,7 @@ def generate_group1(task, number_empties):
     response = []
 
     body = {
-            "model": "llama2-70b",
+            "model": "gpt-4",
             "temperature": 0.8,
             "stream": False,
             'messages': [{'role': 'system',
@@ -39,7 +36,7 @@ def generate_group2(tasks):
     response = []
 
     body = {
-        "model": "llama2-70b",
+        "model": "gpt-3.5-turbo-16k",
         "temperature": 0.7,
         "stream": False,
         'messages': [{'role': 'system',
